@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="js/index.js"></script>
+
+  <script src="js/new.js"></script>
+
+  <script src="js/logout.js"></script>
+
+
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron" style="background: url('images/library.jpg')">
+  <div class="container text-center" >
+    <h1 style="color: #fbfcf9;">Books Management System</h1>      
+    <p style="color: #eff7e1;">just books ... </p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">P&R</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">New Book</a></li>
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#" id="log_out"> Log out</a></li>
+        <li><a href="login.html" id="log_in"> Log in</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-bottom: 50px">
+    <div class="row">
+        <div class="col-xs-6">
+            <center>
+              <img src="images/book_placeholder.png" style="width: 300px; height: 350px" id="book_image">
+            </center>
+        </div>
+        <div class="col-xs-6">
+                <form id='new_book' enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="bookTitle">Book title</label>
+                  <input type="text" class="form-control" id="bookTitle">
+                </div>
+
+                <div class="form-group">
+                  <label for="bookAuthor">Author</label>
+                  <input type="text" class="form-control" id="bookAuthor">
+                </div>
+
+                <div class="form-group">
+                  <label for="bookContent">Book content</label>
+                  <textarea class="form-control" id="bookContent" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookType">Book type</label>
+                  <select class="form-control" id="bookType">
+
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookISBN">ISBN</label>
+                  <input type="text" class="form-control" id="bookISBN" rows="3">
+                </div>
+
+                <div class="form-group">
+                <label for="bookImage">Book image</label>
+                <input type="file" class="form-control-file" id="bookImage">
+              </div>
+              <br>
+              <br>
+
+              <div class="form-group">
+                  <button type="button" class="btn btn-primary" id="createNew">Create new book</button>
+              </div>
+
+
+              </form>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+
+</body>
+</html>
